@@ -1,18 +1,36 @@
-## Getting Started
+# Santander BootCamp 2023
+Java project based on UML about Steve Jobs presentation conference iPhone.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Diagrama de Classes
 
-## Folder Structure
+```mermaid
+classDiagram
+    class iPhone {
+        +powerOn()
+        +powerOff()
+        -music : Music()
+        -phone : Phone()
+        -browser : Browser()
+    }
 
-The workspace contains two folders by default, where:
+    class Music {
+        +pauseMusic()
+        +selectMusic()
+        +playMusic()
+    }
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+    class Phone {
+        +callPhone()
+        +attendPhone()
+    }
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+    class Browser {
+        +viewPage()
+        +updatePage()
+        +addNewPage()
+    }
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+    iPhone --|> Music
+    iPhone --|> Phone
+    iPhone --|> Browser
+```
